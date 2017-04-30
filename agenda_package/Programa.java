@@ -110,7 +110,7 @@ public class Programa {
 			String z = accesoApeticiones.getListaPeticiones().get(1).actividad;
 			
 			//asignar a la casilla horaria correspondiente la actividad
-	//     sala                dia                    hora   actividad
+	//     sala                dia-1                    hora   actividad
 			s1.disponibilidades[24].slotsHorasActividad[hi1] = z;
 					
 			s1.disponibilidades[23].slotsHorasActividad[hi1] = z;

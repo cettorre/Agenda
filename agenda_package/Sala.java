@@ -56,7 +56,7 @@ public void imprimirDisp(){
 }
 
 
-
+//metodo de prueba >obsoleto>metodo actual ocuparHorarios()
 //este mes consigue modificar la tabla de horario peo no le hace caso al mes
 
 public void ocuparHorariosOld(Sala sala){
@@ -90,7 +90,7 @@ public void ocuparHorariosOld(Sala sala){
 
 
 
-
+//metodo de prueba >obsoleto>metodo actual ocuparHorarios()
 //actualmente este metodo no consigue modificar los slots
 public void modificarReservasOld(Sala sala){
 	
