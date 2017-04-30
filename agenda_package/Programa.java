@@ -116,6 +116,9 @@ public class Programa {
 			System.out.println(s1.disponibilidades);
 		
 			
+			s1.modificarReservas(s1);
+			
+			
 			//salida en consola de todas las disponibilidades
 			s1.imprimirDisp();
 	}

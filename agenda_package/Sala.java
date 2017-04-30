@@ -2,8 +2,6 @@ package agenda_package;
 
 
 import java.time.LocalDate;
-import java.time.Month;
-import java.util.ArrayList;
 
 
 public class Sala {
@@ -85,7 +83,7 @@ public void imprimirDisp(){
 }
 
 
-public void modificarReservas(){
+public void modificarReservas(Sala sala){
 
 	
 	//recorrer peticiones
@@ -93,8 +91,11 @@ public void modificarReservas(){
 
 	
 	//procesar solo las peticiones correspondientes al mes seleccionado en fichero config	
-	if(CrearPeticiones.getListaPeticiones().get(i).fechaInicio.getMonth()
-		==	CargarConfiguracion.getMes()){
+	if(CrearPeticiones.getListaPeticiones().get(i).fechaInicio.getMonth()==
+	CargarConfiguracion.getMes()&&
+	CrearPeticiones.getListaPeticiones().get(i).sala==sala.nombreSala
+	//this.nombreSala testear si es alternativa valida para evitar redundancia s1.modificarReservas(s1) y ahorrarme el paso de parametros;
+			){
 	
 	
 	//cuando encuentra el dia correspondiente recorrer array de slots horario
