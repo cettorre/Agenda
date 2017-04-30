@@ -103,32 +103,55 @@ public class Programa {
 			
 			//***********************************************************
 			
+			//get horario inicio de la peticion numero 5
+			int hi5 = accesoApeticiones.getListaPeticiones().get(4).horaInicioS1;
+			
 			//get actividad de la segunda peticion
 			String z = accesoApeticiones.getListaPeticiones().get(1).actividad;
 			
 			//asignar a la casilla horaria correspondiente la actividad
-			//     sala                dia                    hora   actividad
-			s1.disponibilidades[0].slotsHorasActividad[hi1] = z;
+	//     sala                dia                    hora   actividad
+			s1.disponibilidades[24].slotsHorasActividad[hi1] = z;
 					
-			s1.disponibilidades[0].slotsHorasActividad[hi1] = z;
+			s1.disponibilidades[23].slotsHorasActividad[hi1] = z;
+			
+			s1.disponibilidades[26].slotsHorasActividad[0] = z;
 			
 			
-			s1.ocuparHorarios(s1);
+			System.out.println(z);
+			System.out.println(s1.disponibilidades[2].slotsHorasActividad[hi1]);
+			
+			
+//												fecha 					hora
+			System.out.println(s1.disponibilidades[7].slotsHorasActividad[8]);
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			//*****************************************************
+			
+			s1.ocuparHorariosOld(s1);
 			System.out.println(s1.disponibilidades);
 		
 			
-			s1.modificarReservas(s1);
+			s1.modificarReservasOld(s1);
 			
 			
-			//salida en consola de todas las disponibilidades
-			s1.imprimirDisp();
+	
 	
 			// fix temporal. de esta form el metodo ocupar horarios funcionara
 			//solo para una fecha en concreato
 			//DisponibilidadDiaria dispo = new DisponibilidadDiaria(LocalDate.of(2008, 11, 1));
-			s1.ocuparHorarios2();
+			s1.ocuparHorarios();
 			
-			
+			//salida en consola de todas las disponibilidades
+			s1.imprimirDisp();		
 			
 	}
 	

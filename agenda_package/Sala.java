@@ -36,6 +36,11 @@ public Sala(String nombreSala) {
 //********************************************		
 	
 	
+public void modificaEnSerie(int q, int hIn, String act){
+	disponibilidades[q].slotsHorasActividad[hIn] = act;
+	hIn++;
+}
+
 public void setDispo(){ 
 
 for(int i=0;i<tamañoMes;i++){	
@@ -54,7 +59,7 @@ public void imprimirDisp(){
 
 //este mes consigue modificar la tabla de horario peo no le hace caso al mes
 
-public void ocuparHorarios(Sala sala){
+public void ocuparHorariosOld(Sala sala){
 	for (int i=0; i<CrearPeticiones.listaPeticiones.size();i++ ){
 		//get fecha de inicio de las peticiones
 		LocalDate fIni=CrearPeticiones.getListaPeticiones().get(i).fechaInicio;
@@ -87,7 +92,7 @@ public void ocuparHorarios(Sala sala){
 
 
 //actualmente este metodo no consigue modificar los slots
-public void modificarReservas(Sala sala){
+public void modificarReservasOld(Sala sala){
 	
 	//recorrer peticiones
 	for(int i=0;i<CrearPeticiones.getListaPeticiones().size();i++){
@@ -138,7 +143,7 @@ public void modificarReservas(Sala sala){
 
 
 //********************
-public void ocuparHorarios2(){
+public void ocuparHorarios(){
 	for (int i=0; i<CrearPeticiones.listaPeticiones.size();i++ ){
 		
 		
@@ -206,11 +211,55 @@ public void ocuparHorarios2(){
 		
 	//	if(this.disponibilidades[q].slotsHorasActividad[s].)	
 		//if(s==hIni){
-			System.out.println("ssssssss");
-			System.out.println(nombreAct);
-			System.out.println(hIni);
-			this.disponibilidades[q].slotsHorasActividad[hIni]=nombreAct;
+//			System.out.println("ssssssss");
+//			System.out.println(nombreAct);
+//			System.out.println(hIni);
+			//this.disponibilidades[q].slotsHorasActividad[hIni]=nombreAct;
 		//}
+			
+			
+			//get horario inicio de la peticion numero 5       hIn5
+			int hIn = CrearPeticiones.getListaPeticiones().get(i).horaInicioS1;
+			int hFin = CrearPeticiones.getListaPeticiones().get(i).horaFinS1;
+			int duracion = hFin-hIn;
+			
+			//get actividad de la segunda peticion
+			String act = CrearPeticiones.getListaPeticiones().get(i).actividad;
+			System.out.println(act+hIn);
+			//asignar a la casilla horaria correspondiente la actividad
+			//              dia                     hora  actividad
+			
+			//for(int k=0;k>=hIn&&k<=Hfin;k++ )
+			
+			
+			
+			
+		//este metodo repite el proceso de guardar el nombre de la actividad 
+		//en los slot siguientes tantas veces cuantas son las horas de duracion de la actividad
+			for(int k=0;k<duracion;k++ ){			
+				disponibilidades[q].slotsHorasActividad[hIn] = act;
+				hIn++;	
+			}
+			
+					
+		//TODO aqui toca añadir el cogigo que ocupa las casillas sucesiva
+		//en caso que la actividad se divida en dos sesiones
+			int hIn2 = CrearPeticiones.getListaPeticiones().get(i).horaInicioS2;
+			int hFin2 = CrearPeticiones.getListaPeticiones().get(i).horaFinS2;
+			int duracion2 = hFin-hIn;
+		//>>>>>>	
+			
+		
+			
+		//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^	
+		//**************************************************	
+			
+			
+			
+			//disponibilidades[0].slotsHorasActividad[0] = act;
+			
+			System.out.println(hIn+" - "+hFin);
+			
 			
 			
 		}
@@ -236,7 +285,9 @@ public void ocuparHorarios2(){
 		}
 		
 		
-	}		
+	}
+	
+	//imprimirDisp();
 }
 
 
