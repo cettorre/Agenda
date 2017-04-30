@@ -1,6 +1,7 @@
 package agenda_package;
 
 
+import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
 
@@ -71,7 +72,7 @@ public class Programa {
 			
 			
 			//instanciada una sala
-			Sala s1 = new Sala("sala1");
+			Sala s1 = new Sala("Sala1");
 			
 			//get actividad de la segunda peticion
 			String a = accesoApeticiones.getListaPeticiones().get(1).actividad;
@@ -112,7 +113,7 @@ public class Programa {
 			s1.disponibilidades[0].slotsHorasActividad[hi1] = z;
 			
 			
-			s1.ocuparHorarios();
+			s1.ocuparHorarios(s1);
 			System.out.println(s1.disponibilidades);
 		
 			
@@ -121,6 +122,14 @@ public class Programa {
 			
 			//salida en consola de todas las disponibilidades
 			s1.imprimirDisp();
+	
+			// fix temporal. de esta form el metodo ocupar horarios funcionara
+			//solo para una fecha en concreato
+			//DisponibilidadDiaria dispo = new DisponibilidadDiaria(LocalDate.of(2008, 11, 1));
+			s1.ocuparHorarios2();
+			
+			
+			
 	}
 	
 }

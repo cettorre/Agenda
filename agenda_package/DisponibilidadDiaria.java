@@ -47,21 +47,29 @@ public class DisponibilidadDiaria {
 	
 	
 
+	//este metodo ocuparHorarios fue creado aqui para probar
+	//en realidad no tiene sentido que este aqui
+	//tampoco tiene sentido que reciba como parametro ell arrayList de las entradas
 	
-	public void ocuparHorarios(ArrayList<Peticion> listaPeticiones){
-	for (int i=0; i<CrearPeticiones.listaPeticiones.size();i++ ){
-
-		
-		//get actividad de la segunda peticion
-		String z = CrearPeticiones.getListaPeticiones().get(1).actividad;
-		
-		//asignar a la casilla horaria correspondiente la actividad
-		//     sala                dia                    hora   actividad
-		//s1.disponibilidades[0].slotsHorasActividad[hi1] = z;
-		
-		
-	}		
-}
+//	public void ocuparHorarios(ArrayList<Peticion> listaPeticiones){
+//	for (int i=0; i<CrearPeticiones.listaPeticiones.size();i++ ){
+//		
+//		
+//		//get actividad de la segunda peticion
+//		String z = CrearPeticiones.getListaPeticiones().get(1).actividad;
+//		
+//		//asignar a la casilla horaria correspondiente la actividad
+//		//     sala                dia                    hora   actividad
+//		//s1.disponibilidades[0].slotsHorasActividad[hi1] = z;
+//		
+//		
+//	}		
+//}
+//	
+	
+	
+	
+	
 	
 	@Override
 	public String toString() {
