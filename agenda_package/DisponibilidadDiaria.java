@@ -45,10 +45,24 @@ public class DisponibilidadDiaria {
 //	}
 	
 	
-	public void ocuparHorarios(ArrayList<Peticion> listaPeticiones){
-		
-	}
+	
 
+	
+	public void ocuparHorarios(ArrayList<Peticion> listaPeticiones){
+	for (int i=0; i<CrearPeticiones.listaPeticiones.size();i++ ){
+
+		
+		//get actividad de la segunda peticion
+		String z = CrearPeticiones.getListaPeticiones().get(1).actividad;
+		
+		//asignar a la casilla horaria correspondiente la actividad
+		//     sala                dia                    hora   actividad
+		//s1.disponibilidades[0].slotsHorasActividad[hi1] = z;
+		
+		
+	}		
+}
+	
 	@Override
 	public String toString() {
 		return "DisponibilidadDiaria [fecha=" + fecha + ", slotsHorasActividad=" + Arrays.toString(slotsHorasActividad)

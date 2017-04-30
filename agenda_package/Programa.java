@@ -112,8 +112,12 @@ public class Programa {
 			s1.disponibilidades[0].slotsHorasActividad[hi1] = z;
 			
 			
+			s1.ocuparHorarios();
+			System.out.println(s1.disponibilidades);
+		
 			
-			
+			//salida en consola de todas las disponibilidades
+			s1.imprimirDisp();
 	}
 	
 }

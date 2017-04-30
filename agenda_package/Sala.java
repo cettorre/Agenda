@@ -2,6 +2,8 @@ package agenda_package;
 
 
 import java.time.LocalDate;
+import java.time.Month;
+import java.util.ArrayList;
 
 
 public class Sala {
@@ -46,7 +48,77 @@ for(int i=0;i<tamañoMes;i++){
 	}
 }	
 	
+public void ocuparHorarios(){
+	for (int i=0; i<CrearPeticiones.listaPeticiones.size();i++ ){
 
+		LocalDate fIni=CrearPeticiones.getListaPeticiones().get(i).fechaInicio;
+		
+		int hIni=CrearPeticiones.getListaPeticiones().get(i).horaInicioS1;
+				
+		//get actividad de la segunda peticion
+		String nombreAct = CrearPeticiones.getListaPeticiones().get(i).actividad;
+		
+		
+		
+		
+		
+		//asignar a la casilla horaria correspondiente la actividad
+		//          dia                    hora   actividad
+   // disponibilidades[0].slotsHorasActividad[hIni] = nombreAct;
+		
+	disponibilidades[fIni.getDayOfMonth()].slotsHorasActividad[hIni] = nombreAct;
+		
+		
+		
+		
+		
+	}		
+}
+
+
+public void imprimirDisp(){
+	for(int i=0;i<disponibilidades.length;i++){
+		System.out.println(disponibilidades[i]);
+	}		
+	
+	
+}
+
+
+public void modificarReservas(){
+
+	
+	//recorrer peticiones
+	for(int i=0;i<CrearPeticiones.getListaPeticiones().size();i++){
+
+	
+	//procesar solo las peticiones correspondientes al mes seleccionado en fichero config	
+	if(CrearPeticiones.getListaPeticiones().get(i).fechaInicio.getMonth()
+		==	CargarConfiguracion.getMes()){
+	
+	
+	//cuando encuentra el dia correspondiente recorrer array de slots horario
+	//modificar todos los slots que correspondan	
+
+		
+		for(int j=0; j<disponibilidades.length;j++){
+			String s  =	disponibilidades[i].slotsHorasActividad[j];			
+			}
+			
+		
+		
+		
+			for(int j=0; 
+			j>=CrearPeticiones.getListaPeticiones().get(j).horaInicioS1&&
+			j<=CrearPeticiones.getListaPeticiones().get(j).horaFinS1;
+			j++)
+	{
+		String s="x" ;  			
+		disponibilidades[i].slotsHorasActividad[j]=s;
+	}
+	}	
+}	
+}
 }
 
 
