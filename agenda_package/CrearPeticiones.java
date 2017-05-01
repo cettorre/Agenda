@@ -46,6 +46,7 @@ public class CrearPeticiones {
 				
 				String[] horario =array[5].split("_");
 				
+				System.out.println(array[5]);
 				
 				String [] session1 = horario[0].split("-");
 				int comienzoSession1 = Integer.parseInt(session1[0]);
@@ -54,18 +55,30 @@ public class CrearPeticiones {
 				
 				int comienzoSession2=0;
 				int finSession2=0;
-				if (horario.length==2){
+				int[]arr={4};
 				
+				System.out.println("longitud array horarios "+horario.length);
+				System.out.println("longitud array arr "+arr.length);
+				if (array[5].length()==2){
+				//if (horario.length==2){
+			//	System.out.println("longitud array horarios "+horario.length);
 				String [] session2 = horario[1].split("-");
+			//	String [] session2 = array[5].split("-");
 				comienzoSession2 = Integer.parseInt(session2[0]);
 				finSession2 = Integer.parseInt(session2[1]);
+				
+				
+				
 
 
 				
 				}
 				
 				
-	
+				//aqui tuve que crear un array comprensivo de todos los horarios de fin y inicio
+				//para que a la hora de procesar las peticiones para convertirlas en reservas pueda saber si 
+				//la peticion tiene 1 o 2 horarios
+				int[] horarios ={comienzoSession1,comienzoSession2,finSession1,finSession2};
 				
 				Peticion peticion = 
 						new Peticion(
@@ -74,7 +87,9 @@ public class CrearPeticiones {
 						LocalDate.of(intAnoFechaFin, intMesFechaFin, intDiaFechaFin ), 
 						array[4],
 						comienzoSession1, finSession1,
-						comienzoSession2, finSession2);
+						comienzoSession2, finSession2,
+						horarios
+								);
 						
 						
 

@@ -222,7 +222,13 @@ public void ocuparHorarios(){
 			int hIn = CrearPeticiones.getListaPeticiones().get(i).horaInicioS1;
 			int hFin = CrearPeticiones.getListaPeticiones().get(i).horaFinS1;
 			int duracion = hFin-hIn;
-			
+			int hIn2 = CrearPeticiones.getListaPeticiones().get(i).horaInicioS2;
+			int hFin2 = CrearPeticiones.getListaPeticiones().get(i).horaFinS2;
+			int duracion2 = hFin-hIn;
+			System.out.println("h fin xxxxxxxxxxxxxxxxxxxxxxx"+hFin);
+			System.out.println("h fin2 xxxxxxxxxxxxxxxxxxxxxxx"+hFin2);
+			System.out.println("h INI xxxxxxxxxxxxxxxxxxxxxxx"+hIn);
+			System.out.println("h INI2 xxxxxxxxxxxxxxxxxxxxxxx"+hIn2);
 			//get actividad de la segunda peticion
 			String act = CrearPeticiones.getListaPeticiones().get(i).actividad;
 			System.out.println(act+hIn);
@@ -239,16 +245,26 @@ public void ocuparHorarios(){
 			for(int k=0;k<duracion;k++ ){			
 				disponibilidades[q].slotsHorasActividad[hIn] = act;
 				hIn++;	
-			}
+			
 			
 					
 		//TODO aqui toca añadir el cogigo que ocupa las casillas sucesiva
 		//en caso que la actividad se divida en dos sesiones
-			int hIn2 = CrearPeticiones.getListaPeticiones().get(i).horaInicioS2;
-			int hFin2 = CrearPeticiones.getListaPeticiones().get(i).horaFinS2;
-			int duracion2 = hFin-hIn;
-		//>>>>>>	
 			
+			
+			
+		}
+			
+			
+		//>>>>>>	
+//			if(CrearPeticiones.getListaPeticiones().get(i).horarios[3]!=0){
+//				for(int k=0;k<duracion2;k++ ){			
+//					disponibilidades[q].slotsHorasActividad[hIn2] = act;
+//					hIn2++;	
+//				}	
+//				System.out.println("longitud de horarios"+CrearPeticiones.getListaPeticiones().get(i).horarios);
+//				
+//			}
 		
 			
 		//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^	

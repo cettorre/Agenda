@@ -16,11 +16,11 @@ public class Peticion {
 	int horaFinS1;
 	int horaInicioS2;
 	int horaFinS2;
-	
+	int[] horarios;
 
 
 	public Peticion(String actividad, String sala, LocalDate fechaInicio, LocalDate fechaFin, String diasSemana,
-			int horaInicioS1, int horaFinS1, int horaInicioS2, int horaFinS2) {
+			int horaInicioS1, int horaFinS1, int horaInicioS2, int horaFinS2,int[] horarios) {
 		super();
 		this.actividad = actividad;
 		this.sala = sala;
@@ -31,6 +31,7 @@ public class Peticion {
 		this.horaFinS1 = horaFinS1;
 		this.horaInicioS2 = horaInicioS2;
 		this.horaFinS2 = horaFinS2;
+		this.horarios= horarios;
 	}
 
 

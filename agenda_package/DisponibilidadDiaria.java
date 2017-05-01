@@ -19,7 +19,9 @@ public class DisponibilidadDiaria {
 	public DisponibilidadDiaria(LocalDate fecha) {
 	
 		this.fecha = fecha;
-		this.slotsHorasActividad  = new String[24]  ;
+		this.slotsHorasActividad  = new String[23]  ;
+		//el array representa las horas del dia de 0 a 23 
+		//cada slot es un intevalo 0-1, 0-2 etc....
 		
 //******************************************		
 //rellenar array dentro de contructor		
