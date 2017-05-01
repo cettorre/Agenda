@@ -40,6 +40,12 @@ public class CrearPeticiones {
 				int intMesFechaFin = Integer.parseInt(fFin[1]);
 				int intAnoFechaFin = Integer.parseInt(fFin[2]);
 				
+				ArrayList<String> diasSemana = new ArrayList<String>();
+				for(int i=0;i<array[4].length();i++){
+					diasSemana.add(String.valueOf(array[4].charAt(i)));
+				}
+				
+				
 				String[] horario =array[5].split("_");
 				
 				//imprimir en consola la porcion de texto correspondiente a los horarios de ambas sesiones de la petiocion
@@ -52,7 +58,7 @@ public class CrearPeticiones {
 				
 				
 				//testing imprimir en consola la longitud del array de los horarios para saber si tiene 1 o 2 sesiones
-				System.out.println("longitud array horarios "+horario.length);
+				//System.out.println("longitud array horarios "+horario.length);
 				
 				int comienzoSession2=0;
 				int finSession2=0;
@@ -101,6 +107,9 @@ public class CrearPeticiones {
 				
 			}			
 				
+			
+			
+			
 			
 			//System.out.println(br.readLine());
 			

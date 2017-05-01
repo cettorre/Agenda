@@ -87,7 +87,7 @@ public class Programa {
 			
 			//asignar a la casilla horaria correspondiente la actividad
 	//     sala                dia                    hora   actividad
-			s1.disponibilidades[0].slotsHorasActividad[hi1] = a;
+//			s1.disponibilidades[0].slotsHorasActividad[hi1] = a;
 			
 			//imprimir peticion numero 5
 			System.out.println(accesoApeticiones.getListaPeticiones().get(4));
@@ -111,11 +111,11 @@ public class Programa {
 			
 			//asignar a la casilla horaria correspondiente la actividad
 	//     sala                dia-1                    hora   actividad
-			s1.disponibilidades[24].slotsHorasActividad[hi1] = z;
-					
-			s1.disponibilidades[23].slotsHorasActividad[hi1] = z;
-			
-			s1.disponibilidades[26].slotsHorasActividad[0] = z;
+//			s1.disponibilidades[24].slotsHorasActividad[hi1] = z;
+//					
+//			s1.disponibilidades[23].slotsHorasActividad[hi1] = z;
+//			
+//			s1.disponibilidades[26].slotsHorasActividad[0] = z;
 			
 			
 			System.out.println(z);
@@ -136,11 +136,11 @@ public class Programa {
 			
 			//*****************************************************
 			
-			s1.ocuparHorariosOld(s1);
+//			s1.ocuparHorariosOld(s1);
 			System.out.println(s1.disponibilidades);
 		
 			
-			s1.modificarReservasOld(s1);
+//			s1.modificarReservasOld(s1);
 			
 			
 	
@@ -152,6 +152,16 @@ public class Programa {
 			
 			//salida en consola de todas las disponibilidades
 			s1.imprimirDisp();		
+	
+		//	System.out.println(CrearPeticiones.getListaPeticiones().get(0).;
+//	int[] x = {1,2};
+//			
+//			 Peticion p1= new Peticion(" ", " " , LocalDate.of(1, 1, 1), LocalDate.of(1, 1, 1), " ", 2, 2, 2, 2, x );
+//			p1.getDiasSemana("LMX");
+//			System.out.println(p1.getDiasSemana("LMC"));
+			
+			System.out.println(CrearPeticiones.getListaPeticiones().get(0).getDiasSemana());
+			
 			
 	}
 	

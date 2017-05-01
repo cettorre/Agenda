@@ -59,74 +59,74 @@ public void imprimirDisp(){
 //metodo de prueba >obsoleto>metodo actual ocuparHorarios()
 //este mes consigue modificar la tabla de horario peo no le hace caso al mes
 
-public void ocuparHorariosOld(Sala sala){
-	for (int i=0; i<CrearPeticiones.listaPeticiones.size();i++ ){
-		//get fecha de inicio de las peticiones
-		LocalDate fIni=CrearPeticiones.getListaPeticiones().get(i).fechaInicio;
-		//get hora de inicio de las peticiones
-		int hIni=CrearPeticiones.getListaPeticiones().get(i).horaInicioS1;				
-		//get actividad de las peticiones
-		String nombreAct = CrearPeticiones.getListaPeticiones().get(i).actividad;
-		
-				
-		//asignar a la casilla horaria correspondiente la actividad
-		//          dia                    hora   actividad
-   // disponibilidades[0].slotsHorasActividad[hIni] = nombreAct;
-		
-		if(CrearPeticiones.getListaPeticiones().get(i).fechaInicio.getMonth()==
-				CargarConfiguracion.getMes()&&
-				CrearPeticiones.getListaPeticiones().get(i).sala==sala.nombreSala
-				//this.nombreSala testear si es alternativa valida para evitar redundancia s1.modificarReservas(s1) y ahorrarme el paso de parametros;
-						){
-		
-	disponibilidades[fIni.getDayOfMonth()].slotsHorasActividad[hIni] = nombreAct;
-		
-		
-		}
-		
-		
-	}		
-}
+//public void ocuparHorariosOld(Sala sala){
+//	for (int i=0; i<CrearPeticiones.listaPeticiones.size();i++ ){
+//		//get fecha de inicio de las peticiones
+//		LocalDate fIni=CrearPeticiones.getListaPeticiones().get(i).fechaInicio;
+//		//get hora de inicio de las peticiones
+//		int hIni=CrearPeticiones.getListaPeticiones().get(i).horaInicioS1;				
+//		//get actividad de las peticiones
+//		String nombreAct = CrearPeticiones.getListaPeticiones().get(i).actividad;
+//		
+//				
+//		//asignar a la casilla horaria correspondiente la actividad
+//		//          dia                    hora   actividad
+//   // disponibilidades[0].slotsHorasActividad[hIni] = nombreAct;
+//		
+//		if(CrearPeticiones.getListaPeticiones().get(i).fechaInicio.getMonth()==
+//				CargarConfiguracion.getMes()&&
+//				CrearPeticiones.getListaPeticiones().get(i).sala==sala.nombreSala
+//				//this.nombreSala testear si es alternativa valida para evitar redundancia s1.modificarReservas(s1) y ahorrarme el paso de parametros;
+//						){
+//		
+//	disponibilidades[fIni.getDayOfMonth()].slotsHorasActividad[hIni] = nombreAct;
+//		
+//		
+//		}
+//		
+//		
+//	}		
+//}
 
 
 
 //metodo de prueba >obsoleto>metodo actual ocuparHorarios()
 //actualmente este metodo no consigue modificar los slots
-public void modificarReservasOld(Sala sala){
-	
-	//recorrer peticiones
-	for(int i=0;i<CrearPeticiones.getListaPeticiones().size();i++){
-	
-	//procesar solo las peticiones correspondientes al mes seleccionado en fichero config	
-	if(CrearPeticiones.getListaPeticiones().get(i).fechaInicio.getMonth()==
-	CargarConfiguracion.getMes()&&
-	CrearPeticiones.getListaPeticiones().get(i).sala==sala.nombreSala
-	//this.nombreSala testear si es alternativa valida para evitar redundancia s1.modificarReservas(s1) y ahorrarme el paso de parametros;
-			){
-	
-	
-	//cuando encuentra el dia correspondiente recorrer array de slots horario
-	//modificar todos los slots que correspondan	
-
-		
-		for(int j=0; j<disponibilidades.length;j++){
-			String s  =	disponibilidades[i].slotsHorasActividad[j];			
-			}
-			
-		
-		
-		
-			for(int j=0; 
-			j>=CrearPeticiones.getListaPeticiones().get(j).horaInicioS1&&
-			j<=CrearPeticiones.getListaPeticiones().get(j).horaFinS1;
-			j++)
-	{
-		String s="x" ;  			
-		disponibilidades[i].slotsHorasActividad[j]=s;
-	}
-	}	
-}	
-}
+//public void modificarReservasOld(Sala sala){
+//	
+//	//recorrer peticiones
+//	for(int i=0;i<CrearPeticiones.getListaPeticiones().size();i++){
+//	
+//	//procesar solo las peticiones correspondientes al mes seleccionado en fichero config	
+//	if(CrearPeticiones.getListaPeticiones().get(i).fechaInicio.getMonth()==
+//	CargarConfiguracion.getMes()&&
+//	CrearPeticiones.getListaPeticiones().get(i).sala==sala.nombreSala
+//	//this.nombreSala testear si es alternativa valida para evitar redundancia s1.modificarReservas(s1) y ahorrarme el paso de parametros;
+//			){
+//	
+//	
+//	//cuando encuentra el dia correspondiente recorrer array de slots horario
+//	//modificar todos los slots que correspondan	
+//
+//		
+//		for(int j=0; j<disponibilidades.length;j++){
+//			String s  =	disponibilidades[i].slotsHorasActividad[j];			
+//			}
+//			
+//		
+//		
+//		
+//			for(int j=0; 
+//			j>=CrearPeticiones.getListaPeticiones().get(j).horaInicioS1&&
+//			j<=CrearPeticiones.getListaPeticiones().get(j).horaFinS1;
+//			j++)
+//	{
+//		String s="x" ;  			
+//		disponibilidades[i].slotsHorasActividad[j]=s;
+//	}
+//	}	
+//}	
+//}
 
 
 
@@ -148,11 +148,11 @@ public void ocuparHorarios(){
 		
 		
 		//get actividad de las peticiones
-		String nombreAct = CrearPeticiones.getListaPeticiones().get(i).actividad;
-		//get fecha de inicio de las peticiones
-		LocalDate fIni=CrearPeticiones.getListaPeticiones().get(i).fechaInicio;
-		//get hora de inicio de las peticiones
-		int hIni=CrearPeticiones.getListaPeticiones().get(i).horaInicioS1;				
+//		String nombreAct = CrearPeticiones.getListaPeticiones().get(i).actividad;
+//		//get fecha de inicio de las peticiones
+//		LocalDate fIni=CrearPeticiones.getListaPeticiones().get(i).fechaInicio;
+//		//get hora de inicio de las peticiones
+//		int hIni=CrearPeticiones.getListaPeticiones().get(i).horaInicioS1;				
 		
 		
 				
@@ -186,10 +186,10 @@ public void ocuparHorarios(){
 
 		
 		
-		System.out.println("fecha inicio peticion "+fIni);
+//		System.out.println("fecha inicio peticion "+fIni);
 		//System.out.println("fecha inicio peticion "+CrearPeticiones.getListaPeticiones().get(i).fechaInicio);		
 		
-		System.out.println(this.disponibilidades[i].fecha);
+//		System.out.println(this.disponibilidades[i].fecha);
 		
 		//DisponibilidadDiaria dispo=new DisponibilidadDiaria(LocalDate.of(2008,11,1));
 		//WARNONG this.disponibilidades[0].fecha esta en pocion statica 0
@@ -199,10 +199,16 @@ public void ocuparHorarios(){
 		
 		for(int q=0; q<this.disponibilidades.length;q++)
 		{
-		
-		if(CrearPeticiones.getListaPeticiones().get(i).fechaInicio.equals(this.disponibilidades[q].fecha)){
+		//TODO aplicar a todos los dias antre fecha inicio y fin peticion
+			
+			if(
+				CrearPeticiones.getListaPeticiones().get(i).fechaInicio.equals(this.disponibilidades[q].fecha)||
+				((disponibilidades[q].fecha.isAfter(CrearPeticiones.getListaPeticiones().get(i).fechaInicio)&&
+				(disponibilidades[q].fecha.isBefore(CrearPeticiones.getListaPeticiones().get(i).fechaFin)||
+				disponibilidades[q].fecha.isEqual(CrearPeticiones.getListaPeticiones().get(i).fechaFin)))))
+				{
 
-		System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+//		System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 		
 		
 		//ahora hay que recorrer el array slotHorario y cambiar los string
@@ -230,8 +236,11 @@ public void ocuparHorarios(){
 			System.out.println("h INI xxxxxxxxxxxxxxxxxxxxxxx"+hIn);
 			System.out.println("h INI2 xxxxxxxxxxxxxxxxxxxxxxx"+hIn2);
 			//get actividad de la segunda peticion
+			
+			
+			
 			String act = CrearPeticiones.getListaPeticiones().get(i).actividad;
-			System.out.println(act+hIn);
+//			System.out.println(act+hIn);
 			//asignar a la casilla horaria correspondiente la actividad
 			//              dia                     hora  actividad
 			
@@ -251,11 +260,11 @@ public void ocuparHorarios(){
 			
 			
 					
-		//TODO aqui toca añadir el cogigo que ocupa las casillas sucesiva
+		//DONE aqui toca añadir el cogigo que ocupa las casillas sucesiva
 		//en caso que la actividad se divida en dos sesiones
 
 		}
-			//TODO ERROR
+			//DONE ERROR
 			//java.lang.ArrayIndexOutOfBoundsException: 23 linea 262
 			if(CrearPeticiones.listaPeticiones.get(i).horaInicioS2!=0){			
 				for(int k=0;k<duracion2;k++ ){			
@@ -282,67 +291,28 @@ public void ocuparHorarios(){
 //				System.out.println("longitud de horarios"+CrearPeticiones.getListaPeticiones().get(i).horarios);
 //				
 //			}
-		
-			
+
 		//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^	
-		//**************************************************	
-			
-			
-			
+		//**************************************************				
 			//disponibilidades[0].slotsHorasActividad[0] = act;
 			
-			System.out.println(hIn+" - "+hFin);
+//			System.out.println(hIn+" - "+hFin);
 			
 			
 			
 		}
-		
-		
-		
-		
-		
+
 		}
 		
 		}
-		
-		
 	//si el valor del string ya no es null porque fue modificado antes hay que generar una incidencia
 			
-			
-			
-			
-			
+		
 	//disponibilidades[fIni.getDayOfMonth()].slotsHorasActividad[hIni] = nombreAct;
-		
-		
-		}
-		
-		
+		}	
 	}
-	
-	//imprimirDisp();
+		//imprimirDisp();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 

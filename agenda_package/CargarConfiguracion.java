@@ -5,7 +5,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.Month;
-import java.time.Year;
 import java.util.ArrayList;
 
 public class CargarConfiguracion {
