@@ -207,7 +207,50 @@ public void ocuparHorarios(){
 				(disponibilidades[q].fecha.isBefore(CrearPeticiones.getListaPeticiones().get(i).fechaFin)||
 				disponibilidades[q].fecha.isEqual(CrearPeticiones.getListaPeticiones().get(i).fechaFin)))))
 				{
+//*********************** filtro dias de la semana ***************			
+				
+//prueba1				
+//for(int h=0; h<CrearPeticiones.getListaPeticiones().get(i).getDiasSemana().size();h++){				
+//if(disponibilidades[q].fecha.getDayOfWeek().equals(
+//		CrearPeticiones.getListaPeticiones().get(i).getDiasSemana()))		
+//*******************************************************************				
+//prueba 2 sin for no funciona				
+//for(int h=0; h<CrearPeticiones.getListaPeticiones().get(i).getDiasSemana().size();h++){				
+//	if(disponibilidades[q].fecha.getDayOfWeek().equals(
+//		CrearPeticiones.getListaPeticiones().get(i).getDiasSemana()))		
+			
+				
+				
+			//TODO ATTENTION nueva evolucio ahora selecciona el primer dia de la semana pero no los demas	
+//FUNCIONA!!! este metodo recorre el arraylist de dias de la semana y filtra las reservas!!!				
+	for(int h=0; h<disponibilidades.length;h++){
+		for (int z=0; z<CrearPeticiones.getListaPeticiones().get(i).getDiasSemana().size();z++)
+		if(disponibilidades[q].fecha.getDayOfWeek().equals(CrearPeticiones.getListaPeticiones().get(i).getDiasSemana().get(z)))
 
+			//esta line es un maonday. deberia recorrer el arrayList de dayOfTheWeek	
+//			System.out.println(CrearPeticiones.getListaPeticiones().get(i).getDiasSemana().get(1));		
+//			System.out.println(h);	
+//				System.out.println(CrearPeticiones.getListaPeticiones().get(i).getDiasSemana().get(i));	
+//			System.out.println(i);	//peticiones
+//			System.out.println(q);//horas
+//			System.out.println(disponibilidades[q].fecha.getDayOfWeek());
+//			System.out.println(disponibilidades.length);//dias
+//			System.out.println(LocalDate.of(2008,3,3).getDayOfWeek() );
+////				)
+//)		
+
+				
+	
+	
+	
+	
+	
+//poniendo el if en esta posicion todos null	
+//			if(disponibilidades[q].fecha.getDayOfWeek().equals(
+//					CrearPeticiones.getListaPeticiones().get(i).getDiasSemana()))		
+	
+				
+//****************************************************************
 //		System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 		
 		
@@ -231,10 +274,10 @@ public void ocuparHorarios(){
 			int hIn2 = CrearPeticiones.getListaPeticiones().get(i).horaInicioS2;
 			int hFin2 = CrearPeticiones.getListaPeticiones().get(i).horaFinS2;
 			int duracion2 = hFin2-hIn2;
-			System.out.println("h fin xxxxxxxxxxxxxxxxxxxxxxx"+hFin);
-			System.out.println("h fin2 xxxxxxxxxxxxxxxxxxxxxxx"+hFin2);
-			System.out.println("h INI xxxxxxxxxxxxxxxxxxxxxxx"+hIn);
-			System.out.println("h INI2 xxxxxxxxxxxxxxxxxxxxxxx"+hIn2);
+//			System.out.println("h fin xxxxxxxxxxxxxxxxxxxxxxx"+hFin);
+//			System.out.println("h fin2 xxxxxxxxxxxxxxxxxxxxxxx"+hFin2);
+//			System.out.println("h INI xxxxxxxxxxxxxxxxxxxxxxx"+hIn);
+//			System.out.println("h INI2 xxxxxxxxxxxxxxxxxxxxxxx"+hIn2);
 			//get actividad de la segunda peticion
 			
 			
@@ -316,3 +359,4 @@ public void ocuparHorarios(){
 }
 
 
+}

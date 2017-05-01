@@ -75,13 +75,13 @@ public class Programa {
 			Sala s1 = new Sala("Sala1");
 			
 			//get actividad de la segunda peticion
-			String a = accesoApeticiones.getListaPeticiones().get(1).actividad;
+//			String a = accesoApeticiones.getListaPeticiones().get(1).actividad;
 			
 			//horario de inicio de la peticion numero 5
-			int hi1 = accesoApeticiones.getListaPeticiones().get(4).horaInicioS1;
+	//		int hi1 = accesoApeticiones.getListaPeticiones().get(4).horaInicioS1;
 			
 			//horario de inicio de la peticion numero 2
-			int hi2 = accesoApeticiones.getListaPeticiones().get(1).horaInicioS1;
+//			int hi2 = accesoApeticiones.getListaPeticiones().get(1).horaInicioS1;
 			
 			
 			
@@ -90,24 +90,24 @@ public class Programa {
 //			s1.disponibilidades[0].slotsHorasActividad[hi1] = a;
 			
 			//imprimir peticion numero 5
-			System.out.println(accesoApeticiones.getListaPeticiones().get(4));
+//			System.out.println(accesoApeticiones.getListaPeticiones().get(4));
 			
 			//imprimir disponibilidad de la sala para un dia especifico
-			System.out.println(s1.disponibilidades[0]);
+//			System.out.println(s1.disponibilidades[0]);
 		
 			//imprimir contenido de casilla horario 
-			System.out.println(s1.disponibilidades[0].slotsHorasActividad[hi1]);
+//			System.out.println(s1.disponibilidades[0].slotsHorasActividad[hi1]);
 			
-			System.out.println(a);
+//			System.out.println(a);
 			
 			
 			//***********************************************************
 			
 			//get horario inicio de la peticion numero 5
-			int hi5 = accesoApeticiones.getListaPeticiones().get(4).horaInicioS1;
+//			int hi5 = accesoApeticiones.getListaPeticiones().get(4).horaInicioS1;
 			
 			//get actividad de la segunda peticion
-			String z = accesoApeticiones.getListaPeticiones().get(1).actividad;
+//			String z = accesoApeticiones.getListaPeticiones().get(1).actividad;
 			
 			//asignar a la casilla horaria correspondiente la actividad
 	//     sala                dia-1                    hora   actividad
@@ -118,12 +118,12 @@ public class Programa {
 //			s1.disponibilidades[26].slotsHorasActividad[0] = z;
 			
 			
-			System.out.println(z);
-			System.out.println(s1.disponibilidades[2].slotsHorasActividad[hi1]);
+//			System.out.println(z);
+//			System.out.println(s1.disponibilidades[2].slotsHorasActividad[hi1]);
 			
 			
 //												fecha 					hora
-			System.out.println(s1.disponibilidades[7].slotsHorasActividad[8]);
+//			System.out.println(s1.disponibilidades[7].slotsHorasActividad[8]);
 			
 			
 			
@@ -160,7 +160,7 @@ public class Programa {
 //			p1.getDiasSemana("LMX");
 //			System.out.println(p1.getDiasSemana("LMC"));
 			
-			System.out.println(CrearPeticiones.getListaPeticiones().get(0).getDiasSemana());
+//			System.out.println(CrearPeticiones.getListaPeticiones().get(0).getDiasSemana());
 			
 			
 	}
