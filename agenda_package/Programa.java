@@ -29,11 +29,19 @@ public class Programa {
 	
 			//cargar configuracion de config.txt
 
-			CargarConfiguracion.leerConfig();			
-			CargarConfiguracion.año= CargarConfiguracion.configuracion.get(0);
-			CargarConfiguracion.mes= CargarConfiguracion.configuracion.get(1);
-			CargarConfiguracion.idiomaEntrada= CargarConfiguracion.configuracion.get(2);
-			CargarConfiguracion.idiomaSalida= CargarConfiguracion.configuracion.get(3);
+		CargarConfiguracion.leerConfig();			
+		CargarConfiguracion.año= CargarConfiguracion.configuracion.get(0);
+		CargarConfiguracion.mes= CargarConfiguracion.configuracion.get(1);
+		CargarConfiguracion.idiomaEntrada= CargarConfiguracion.configuracion.get(2);
+		CargarConfiguracion.idiomaSalida= CargarConfiguracion.configuracion.get(3);
+					
+		//Imprimir lod datos del fichero de configuracion
+		System.out.println("En el ficher de configuracion se han introducido los siguientes datos: "+
+		"\nAño:\t\t\t "+CargarConfiguracion.getAño()+
+		"\nMes:\t\t\t "+CargarConfiguracion.getMes() +
+		"\nidioma de entrada:\t " + CargarConfiguracion.getIdiomaEntrada()+
+		"\nIdioma de salida:\t " + CargarConfiguracion.getIdiomaSalida());
+
 			
 			//crear referencia a clase CrearPeticione
 			CrearPeticiones accesoApeticiones = new CrearPeticiones();
@@ -41,25 +49,10 @@ public class Programa {
 			
 			
 			//imprimir lista de peticiones contenida en arrayLIst de la clase CrearPrticiones
-			System.out.println(accesoApeticiones.listaPeticiones);
+			
 			System.out.println(accesoApeticiones.getListaPeticiones());
 		
-			//Disponibilidad.rellenar(Disponibilidad.getDisponibilidad());
-			
 						
-			//Imprimir lod datos del fichero de configuracion año(0) mes(1) idioma entrada(2) idioma salida(3)
-			System.out.println(CargarConfiguracion.configuracion);
-			//System.out.println(CargarConfiguracion.configuracion.get(1));
-			System.out.println(CargarConfiguracion.año);
-			System.out.println(CargarConfiguracion.mes);
-			System.out.println(CargarConfiguracion.idiomaEntrada);
-			System.out.println(CargarConfiguracion.idiomaSalida);
-			
-			System.out.println(CargarConfiguracion.getAño());
-			System.out.println(CargarConfiguracion.getMes());
-			System.out.println(CargarConfiguracion.getIdiomaEntrada());
-			System.out.println(CargarConfiguracion.getIdiomaSalida());
-			
 			
 			
 //			System.out.println(Month.APRIL);
@@ -137,7 +130,7 @@ public class Programa {
 			//*****************************************************
 			
 //			s1.ocuparHorariosOld(s1);
-			System.out.println(s1.disponibilidades);
+//			System.out.println(s1.disponibilidades);
 		
 			
 //			s1.modificarReservasOld(s1);

@@ -49,7 +49,7 @@ public class CrearPeticiones {
 				String[] horario =array[5].split("_");
 				
 				//imprimir en consola la porcion de texto correspondiente a los horarios de ambas sesiones de la petiocion
-				System.out.println(array[5]);
+//				System.out.println(array[5]);
 				
 				String [] session1 = horario[0].split("-");
 				int comienzoSession1 = Integer.parseInt(session1[0]);
