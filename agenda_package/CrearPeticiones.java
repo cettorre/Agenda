@@ -5,21 +5,21 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class CrearPeticiones {
  //ej. peticion: ReunionJava Sala1 01/01/2008 31/12/2008 LMCJVSG 00-07_21-24
 	
 	
-	static ArrayList<Peticion> listaPeticiones = new ArrayList<>();
+	public static ArrayList<Peticion> listaPeticiones = new ArrayList<>();
+	
 	
 	public static ArrayList<Peticion> getListaPeticiones() {
 		return listaPeticiones;
 	}
 
-	public void crearPeticion() {
-		
+	
+	public void crearPeticion() {	
 		try(BufferedReader br = 
 				new BufferedReader(new FileReader("src/peticiones.txt"))) 
 		{
@@ -27,13 +27,9 @@ public class CrearPeticiones {
 			
 			String linea;
 			String[] array;
-			//String[] arrayPeticion;
-			
-			while ( (linea = br.readLine()) != null ) {
-				
+			while ((linea = br.readLine()) != null ) {
 				array = linea.split(" ");
 				
-				//System.out.println(array[0]);
 				String[] fInicio =array[2].split("/");
 				int intDiaFechaInicio = Integer.parseInt(fInicio[0]);
 				int intMesFechaInicio = Integer.parseInt(fInicio[1]);
@@ -46,6 +42,7 @@ public class CrearPeticiones {
 				
 				String[] horario =array[5].split("_");
 				
+				//imprimir en consola la porcion de texto correspondiente a los horarios de ambas sesiones de la petiocion
 				System.out.println(array[5]);
 				
 				String [] session1 = horario[0].split("-");
@@ -53,19 +50,24 @@ public class CrearPeticiones {
 				int finSession1 = Integer.parseInt(session1[1]);
 				
 				
+				
+				//testing imprimir en consola la longitud del array de los horarios para saber si tiene 1 o 2 sesiones
+				System.out.println("longitud array horarios "+horario.length);
+				
 				int comienzoSession2=0;
 				int finSession2=0;
-				int[]arr={4};
+				if (horario.length==2){
+					String [] session2 = horario[1].split("-");
+					comienzoSession2 = Integer.parseInt(session2[0]);
+					finSession2 = Integer.parseInt(session2[1]);	
 				
-				System.out.println("longitud array horarios "+horario.length);
-				System.out.println("longitud array arr "+arr.length);
-				if (array[5].length()==2){
+					
 				//if (horario.length==2){
 			//	System.out.println("longitud array horarios "+horario.length);
-				String [] session2 = horario[1].split("-");
+			//	String [] session2 = horario[1].split("-");
 			//	String [] session2 = array[5].split("-");
-				comienzoSession2 = Integer.parseInt(session2[0]);
-				finSession2 = Integer.parseInt(session2[1]);
+//				comienzoSession2 = Integer.parseInt(session2[0]);
+//				finSession2 = Integer.parseInt(session2[1]);
 				
 				
 				

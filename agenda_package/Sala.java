@@ -224,7 +224,7 @@ public void ocuparHorarios(){
 			int duracion = hFin-hIn;
 			int hIn2 = CrearPeticiones.getListaPeticiones().get(i).horaInicioS2;
 			int hFin2 = CrearPeticiones.getListaPeticiones().get(i).horaFinS2;
-			int duracion2 = hFin-hIn;
+			int duracion2 = hFin2-hIn2;
 			System.out.println("h fin xxxxxxxxxxxxxxxxxxxxxxx"+hFin);
 			System.out.println("h fin2 xxxxxxxxxxxxxxxxxxxxxxx"+hFin2);
 			System.out.println("h INI xxxxxxxxxxxxxxxxxxxxxxx"+hIn);
@@ -242,6 +242,9 @@ public void ocuparHorarios(){
 			
 		//este metodo repite el proceso de guardar el nombre de la actividad 
 		//en los slot siguientes tantas veces cuantas son las horas de duracion de la actividad
+		
+			
+			
 			for(int k=0;k<duracion;k++ ){			
 				disponibilidades[q].slotsHorasActividad[hIn] = act;
 				hIn++;	
@@ -250,10 +253,24 @@ public void ocuparHorarios(){
 					
 		//TODO aqui toca añadir el cogigo que ocupa las casillas sucesiva
 		//en caso que la actividad se divida en dos sesiones
-			
-			
-			
+
 		}
+			//TODO ERROR
+			//java.lang.ArrayIndexOutOfBoundsException: 23 linea 262
+			if(CrearPeticiones.listaPeticiones.get(i).horaInicioS2!=0){			
+				for(int k=0;k<duracion2;k++ ){			
+				 disponibilidades[q].slotsHorasActividad[hIn2] = act;
+//				System.out.println("longitud SLOT "+disponibilidades[q].slotsHorasActividad.length);	
+					hIn2++;	
+				}
+	
+//				disponibilidades[q].slotsHorasActividad[0] = "doble";
+			}
+			
+			
+			
+			
+			
 			
 			
 		//>>>>>>	
