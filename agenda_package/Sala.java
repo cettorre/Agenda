@@ -11,6 +11,8 @@ public class Sala {
 	//String [] stringArray; 
 	String nombreSala;
 	DisponibilidadDiaria[] disponibilidades; 
+	boolean incidencia =false;
+	
 	
 public Sala(String nombreSala) {		
 		//this.stringArray = new String [24];
@@ -199,7 +201,7 @@ public void ocuparHorarios(){
 		
 		for(int q=0; q<this.disponibilidades.length;q++)
 		{
-		//TODO aplicar a todos los dias antre fecha inicio y fin peticion
+		//DONE aplicar a todos los dias antre fecha inicio y fin peticion
 			
 			if(
 				CrearPeticiones.getListaPeticiones().get(i).fechaInicio.equals(this.disponibilidades[q].fecha)||
@@ -294,27 +296,57 @@ public void ocuparHorarios(){
 			
 		//este metodo repite el proceso de guardar el nombre de la actividad 
 		//en los slot siguientes tantas veces cuantas son las horas de duracion de la actividad
-		
+			if(disponibilidades[q].slotsHorasActividad[hIn]==null){
+							
 			
-			
-			for(int k=0;k<duracion;k++ ){			
+			for(int k=0;k<duracion;k++ ){
+				
+				//TODO work ini progress:trabajando para en caso de incidencia 
+				//parar el bucle y escribir en .log
+				//boolean break generar instancia de incidencia
+				
+				
+//				if(disponibilidades[q].slotsHorasActividad[hIn]!=null){	
+//				System.out.println("incidencia");
+//				break;}
+
+				
+				
+				
+				
 				disponibilidades[q].slotsHorasActividad[hIn] = act;
 				hIn++;	
 			
-			
+				//}else{System.out.println("la sala esta ocupada");}
+				
+				
+						
+				
 					
 		//DONE aqui toca añadir el cogigo que ocupa las casillas sucesiva
 		//en caso que la actividad se divida en dos sesiones
 
+			
+			}}else{
+			
+			System.out.println("sala ocupada"); break; 
 		}
+			
+			//Comprobar si la sala esta ocupada 
+				
+			
+			
+			
+			
 			//DONE ERROR
 			//java.lang.ArrayIndexOutOfBoundsException: 23 linea 262
 			if(CrearPeticiones.listaPeticiones.get(i).horaInicioS2!=0){			
-				for(int k=0;k<duracion2;k++ ){			
+				for(int m=0;m<duracion2;m++ ){			
 				 disponibilidades[q].slotsHorasActividad[hIn2] = act;
 //				System.out.println("longitud SLOT "+disponibilidades[q].slotsHorasActividad.length);	
-					hIn2++;	
+					hIn2++;	}
 				}
+				
 	
 //				disponibilidades[q].slotsHorasActividad[0] = "doble";
 			}
@@ -355,8 +387,7 @@ public void ocuparHorarios(){
 		}	
 	}
 		//imprimirDisp();
-}
-}
 
 
-}
+
+}}
