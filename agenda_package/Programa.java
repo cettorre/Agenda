@@ -5,6 +5,8 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
 
+import vistaHtml_pack.vistaTablas;
+
 
 
 public class Programa {
@@ -154,6 +156,10 @@ public class Programa {
 //			System.out.println(p1.getDiasSemana("LMC"));
 			
 //			System.out.println(CrearPeticiones.getListaPeticiones().get(0).getDiasSemana());
+			
+			
+			System.out.println(vistaTablas.buildSemanaHTML(s1).toString());
+			System.out.println(vistaTablas.buildMonthTable(s1));
 			
 			
 	}

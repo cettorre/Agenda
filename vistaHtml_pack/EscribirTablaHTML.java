@@ -3,18 +3,20 @@ package vistaHtml_pack;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import agenda_package.Sala;
+
 
 public class EscribirTablaHTML {
 	
 	//static StringBuilder sb; 
 	
-		public void escribirTablasHTML(){
+		public void escribirTablasHTML(Sala sala){
 			//String anual;
 			//sb = new StringBuilder(Constants.anual.toString());
 			
 			//anual = Constants.anual.toString();
 			
-			String tablasHtml = vistaTablas.buildHTML().toString();
+			String tablasHtml = vistaTablas.buildSemanaHTML(sala).toString();
 			
 			try {
 				FileWriter html 

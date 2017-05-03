@@ -71,5 +71,19 @@ public class DisponibilidadDiaria {
 		return "DisponibilidadDiaria [fecha=" + fecha + ", slotsHorasActividad=" + Arrays.toString(slotsHorasActividad)
 				+ "]";
 	}
+
+
+
+
+	public LocalDate getFecha() {
+		return fecha;
+	}
+
+
+
+
+	public String[] getSlotsHorasActividad() {
+		return slotsHorasActividad;
+	}
 }
 

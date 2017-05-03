@@ -390,4 +390,13 @@ public void ocuparHorarios(){
 
 
 
-}}
+}
+
+public DisponibilidadDiaria[] getDisponibilidades() {
+	return disponibilidades;
+}
+
+
+
+
+}
