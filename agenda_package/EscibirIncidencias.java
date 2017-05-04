@@ -15,13 +15,14 @@ public class EscibirIncidencias {
 
 		for(int i=0; i<CrearPeticiones.getListaPeticiones().size(); i++){
 			
-			System.out.println();
-		
+			
+			if (CrearPeticiones.getListaPeticiones().get(i).incident==false) {
+				
 			
 			fWincidencias.write(CrearPeticiones.getListaPeticiones().get(i).toString());
 			fWincidencias.newLine();
 			
-
+			}
 			
 			
 		}

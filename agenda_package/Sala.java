@@ -313,24 +313,33 @@ public void ocuparHorarios(){
 
 				
 			
+//				if(disponibilidades[q].slotsHorasActividad[hIn]!=null)	
+//					System.out.println("incident");	
+//					CrearPeticiones.getListaPeticiones().get(i).incident=true;
+				
+				
+								
+				disponibilidades[q].slotsHorasActividad[hIn] = act;
+				
 				if(disponibilidades[q].slotsHorasActividad[hIn]!=null)	
 					System.out.println("incident");	
 					CrearPeticiones.getListaPeticiones().get(i).incident=true;
 				
 				
-								
-				disponibilidades[q].slotsHorasActividad[hIn] = act;
+				hIn++;
 	
-			
+				
+				
 				
 				}
 				
 				
+			
 				
 				
 				
 				
-				hIn++;	
+					
 			
 				
 				//}else{System.out.println("la sala esta ocupada");}
