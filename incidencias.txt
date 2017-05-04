@@ -1,0 +1,6 @@
+Peticion [actividad=ReunioJava1LM, sala=Sala1, fechaInicio=2008-11-01, fechaFin=2008-12-30, diasSemana=MTW, horaInicioS1=1, horaFinS1=4, horaInicioS2=0, horaFinS2=0Incident: true]
+
+Peticion [actividad=ReunioPLM, sala=Sala1, fechaInicio=2008-11-01, fechaFin=2008-12-30, diasSemana=F, horaInicioS1=1, horaFinS1=4, horaInicioS2=0, horaFinS2=0Incident: true]
+
+Peticion [actividad=ReunioMierc, sala=Sala1, fechaInicio=2008-11-01, fechaFin=2008-12-30, diasSemana=N, horaInicioS1=1, horaFinS1=4, horaInicioS2=0, horaFinS2=0Incident: true]
+

@@ -11,6 +11,9 @@ public class CrearPeticiones {
  //ej. peticion: ReunionJava Sala1 01/01/2008 31/12/2008 LMCJVSG 00-07_21-24
 	
 	
+	boolean incident;
+	
+	
 	public static ArrayList<Peticion> listaPeticiones = new ArrayList<>();
 	
 	
@@ -88,6 +91,8 @@ public class CrearPeticiones {
 				//la peticion tiene 1 o 2 horarios
 				int[] horarios ={comienzoSession1,comienzoSession2,finSession1,finSession2};
 				
+				
+				
 				Peticion peticion = 
 						new Peticion(
 						array[0], array[1], 
@@ -96,7 +101,8 @@ public class CrearPeticiones {
 						array[4],
 						comienzoSession1, finSession1,
 						comienzoSession2, finSession2,
-						horarios
+						horarios,
+						incident
 								);
 						
 						

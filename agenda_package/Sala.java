@@ -145,6 +145,7 @@ public void imprimirDisp(){
 
 
 //********************
+@SuppressWarnings("unused")
 public void ocuparHorarios(){
 	for (int i=0; i<CrearPeticiones.listaPeticiones.size();i++ ){
 		
@@ -311,26 +312,41 @@ public void ocuparHorarios(){
 //				break;}
 
 				
+			
+				if(disponibilidades[q].slotsHorasActividad[hIn]!=null)	
+					System.out.println("incident");	
+					CrearPeticiones.getListaPeticiones().get(i).incident=true;
 				
 				
-				
+								
 				disponibilidades[q].slotsHorasActividad[hIn] = act;
+	
+			
+				
+				}
+				
+				
+				
+				
+				
+				
 				hIn++;	
 			
+				
 				//}else{System.out.println("la sala esta ocupada");}
 				
 				
-						
+				 		
 				
 					
 		//DONE aqui toca añadir el cogigo que ocupa las casillas sucesiva
 		//en caso que la actividad se divida en dos sesiones
 
 			
-			}}else{
-			
-			System.out.println("sala ocupada"); break; 
-		}
+//			}}else{
+//			
+//			System.out.println("sala ocupada"); 
+//		}
 			
 			//Comprobar si la sala esta ocupada 
 				
@@ -388,9 +404,9 @@ public void ocuparHorarios(){
 	}
 		//imprimirDisp();
 
+	}}
 
 
-}
 
 public DisponibilidadDiaria[] getDisponibilidades() {
 	return disponibilidades;

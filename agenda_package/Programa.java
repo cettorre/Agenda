@@ -1,17 +1,15 @@
 package agenda_package;
-
-
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
-
-import vistaHtml_pack.vistaTablas;
+import vistaHtml_pack.*;
 
 
 
 public class Programa {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		/*
 		 * metodos para implementar:
@@ -160,8 +158,14 @@ public class Programa {
 			
 			System.out.println(vistaTablas.buildSemanaHTML(s1).toString());
 			System.out.println(vistaTablas.buildMonthTable(s1));
+			System.out.println(CrearPeticiones.getListaPeticiones());
+		//	EscribirLogIncidencias.escribirLogIncidencias(s1);
+	
 			
 			
+			EscibirIncidencias.escribeIncidencias();
+	
+			EscribirTablaHTML.escribirTablasHTML(s1);
 	}
 	
 }

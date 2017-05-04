@@ -10,7 +10,7 @@ public class EscribirTablaHTML {
 	
 	//static StringBuilder sb; 
 	
-		public void escribirTablasHTML(Sala sala){
+		public static void escribirTablasHTML(Sala sala){
 			//String anual;
 			//sb = new StringBuilder(Constants.anual.toString());
 			
