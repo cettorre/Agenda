@@ -1,4 +1,4 @@
-package agenda_package;
+package operaciones;
 
 
 import java.io.BufferedReader;
@@ -12,7 +12,7 @@ public class CargarConfiguracion {
 	
 	static String año;
 	static String mes;
-	static String idiomaEntrada;
+	public static String idiomaEntrada;
 	static String idiomaSalida;
 	
 	static String linea;

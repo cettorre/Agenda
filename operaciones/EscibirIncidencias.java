@@ -1,4 +1,4 @@
-package agenda_package;
+package operaciones;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

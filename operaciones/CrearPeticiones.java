@@ -1,4 +1,4 @@
-package agenda_package;
+package operaciones;
 
 
 import java.io.BufferedReader;
@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+
+import clasesLogicas.Peticion;
 
 public class CrearPeticiones {
  //ej. peticion: ReunionJava Sala1 01/01/2008 31/12/2008 LMCJVSG 00-07_21-24

@@ -1,25 +1,27 @@
-package agenda_package;
+package clasesLogicas;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+import operaciones.CargarConfiguracion;
+
 
 
 public class Peticion {
 	
-	String actividad;
-	String sala;
-	LocalDate fechaInicio;
-	LocalDate fechaFin;	
-	String diasSemana;
-	int horaInicioS1;
-	int horaFinS1;
-	int horaInicioS2;
-	int horaFinS2;
-	int[] horarios;
-	ArrayList<DayOfWeek> daysConverted;
-	boolean incident;
+	public String actividad;
+	public String sala;
+	public LocalDate fechaInicio;
+	public LocalDate fechaFin;	
+	public String diasSemana;
+	public int horaInicioS1;
+	public int horaFinS1;
+	public int horaInicioS2;
+	public int horaFinS2;
+	public int[] horarios;
+	public ArrayList<DayOfWeek> daysConverted;
+	public boolean incident;
 
 	
 

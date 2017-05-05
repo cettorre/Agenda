@@ -1,26 +1,23 @@
-package vistaHtml_pack;
+package operaciones;
 
 import java.io.FileWriter;
 import java.io.IOException;
 
-import agenda_package.Sala;
+import clasesLogicas.Sala;
+import vistaHtml_pack.vistaTablas;
 
 
 public class EscribirTablaHTML {
 	
-	//static StringBuilder sb; 
 	
 		public static void escribirTablasHTML(Sala sala){
-			//String anual;
-			//sb = new StringBuilder(Constants.anual.toString());
 			
-			//anual = Constants.anual.toString();
 			
-			String tablasHtml = vistaTablas.buildSemanaHTML(sala).toString();
+			String tablasHtml = vistaTablas.buildTablasHTML(sala).toString();
 			
 			try {
 				FileWriter html 
-					= new FileWriter("src/agenda.html", false);
+					= new FileWriter("src/"+ sala.getNombreSala() +".html", false);
 			
 				for (int i=0;i<tablasHtml.length(); i++){
 				html.write(tablasHtml.charAt(i));

@@ -4,3 +4,5 @@ Peticion [actividad=ReunioINC, sala=Sala1, fechaInicio=2008-11-01, fechaFin=2008
 
 Peticion [actividad=ReunioJavIN, sala=Sala1, fechaInicio=2008-11-01, fechaFin=2008-12-30, diasSemana=JV, horaInicioS1=3, horaFinS1=8, horaInicioS2=0, horaFinS2=0Incident: false]
 
+Peticion [actividad=ReunioJaINC, sala=Sala2, fechaInicio=2008-11-01, fechaFin=2008-12-30, diasSemana=L, horaInicioS1=1, horaFinS1=4, horaInicioS2=7, horaFinS2=20Incident: false]
+
