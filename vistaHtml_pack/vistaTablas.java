@@ -189,11 +189,11 @@ public static StringBuilder buildTablasHTML(Sala sala){
 	           "<th>HORA</th>" +
 	           "<th>" + sala.getDisponibilidades()[28].getFecha() +"</br>" +sala.getDisponibilidades()[28].getFecha().getDayOfWeek()+ "</th>" +
 	           "<th>" + sala.getDisponibilidades()[29].getFecha() +"</br>" +sala.getDisponibilidades()[29].getFecha().getDayOfWeek()+ "</th>" +
-	           "<th>" + sala.getDisponibilidades()[0].getFecha() +"</br>" +sala.getDisponibilidades()[27].getFecha().getDayOfWeek()+ "</th>" +
-	           "<th>" + sala.getDisponibilidades()[1].getFecha() +"</br>" +sala.getDisponibilidades()[0].getFecha().getDayOfWeek()+ "</th>" +
-	           "<th>" + sala.getDisponibilidades()[2].getFecha() +"</br>" +sala.getDisponibilidades()[0].getFecha().getDayOfWeek()+ "</th>" +
-	           "<th>" + sala.getDisponibilidades()[3].getFecha() +"</br>" +sala.getDisponibilidades()[0].getFecha().getDayOfWeek()+ "</th>" +
-	           "<th>" + sala.getDisponibilidades()[4].getFecha() +"</br>" +sala.getDisponibilidades()[0].getFecha().getDayOfWeek()+ "</th>" +
+	           "<th>" + sala.getDisponibilidades()[0].getFecha() +"</br>" +sala.getDisponibilidades()[0].getFecha().getDayOfWeek()+ "</th>" +
+	           "<th>" + sala.getDisponibilidades()[1].getFecha() +"</br>" +sala.getDisponibilidades()[1].getFecha().getDayOfWeek()+ "</th>" +
+	           "<th>" + sala.getDisponibilidades()[2].getFecha() +"</br>" +sala.getDisponibilidades()[2].getFecha().getDayOfWeek()+ "</th>" +
+	           "<th>" + sala.getDisponibilidades()[3].getFecha() +"</br>" +sala.getDisponibilidades()[3].getFecha().getDayOfWeek()+ "</th>" +
+	           "<th>" + sala.getDisponibilidades()[4].getFecha() +"</br>" +sala.getDisponibilidades()[4].getFecha().getDayOfWeek()+ "</th>" +
 	           "</tr>");
 	
 	
