@@ -1,25 +1,17 @@
 package vistaHtml_pack;
-
-import java.time.DayOfWeek;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import clasesLogicas.Sala;
+
 
 public class vistaTablas {
 
 
+	
+	
 public static StringBuilder buildTablasHTML(Sala sala){
 
 	
 	
 	StringBuilder tablaHorariosSemanales = new StringBuilder();
-	
-	
-	
-	
-	
 	
 	String[] horariosHtml ={"0-1","1-2","2-3","3-4","4-5","5-6","6-7","7-8","8-9","9-10","10-11","11-12","12-13","13-14","14-15","15-16","16-17","17-18","18-19","18-19","19-20","20-21","21-22","22-23","22-23","22-23","22-23","22-23"};	
 		
@@ -43,21 +35,21 @@ public static StringBuilder buildTablasHTML(Sala sala){
 	for (int i = 0; i < 23; i++) {
 	    tablaHorariosSemanales.append("<tr><td>")
 	    .append(horariosHtml[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[0].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[1].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[2].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[3].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[4].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[5].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[6].getSlotsHorasActividad()[i])
-	       .append("</td></tr>");
+	       .append("</td><td>");
+	    if(sala.getDisponibilidades()[0].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[0].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[1].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[1].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[2].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[2].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[3].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[3].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[4].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[4].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[5].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[5].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[6].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[6].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td></tr>");
 	    
 	}
 	tablaHorariosSemanales.append("</table>" +
