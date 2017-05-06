@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="clasesLogicas.Peticion" project="Agenda_rep" 
     file="/Agenda_rep/src/clasesLogicas/Peticion.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="430" width="462" x="-29" y="-9"/>    
+    <position height="-1" width="-1" x="237" y="245"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="clasesLogicas.Sala" project="Agenda_rep" 
     file="/Agenda_rep/src/clasesLogicas/Sala.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="232" width="271" x="473" y="-9"/>    
+    <position height="-1" width="-1" x="576" y="150"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="clasesLogicas.DisponibilidadDiaria" project="Agenda_rep" 
     file="/Agenda_rep/src/clasesLogicas/DisponibilidadDiaria.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="178" width="214" x="473" y="461"/>    
+    <position height="-1" width="-1" x="712" y="371"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      

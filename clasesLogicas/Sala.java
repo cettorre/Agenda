@@ -12,8 +12,7 @@ public class Sala {
 	static int tamañoMes =	CargarConfiguracion.getMes().length(false);
 	String nombreSala;
 	DisponibilidadDiaria[] disponibilidades; 
-	boolean incidencia =false;
-
+	
 	
 	
 public Sala(String nombreSala) {		
