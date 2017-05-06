@@ -9,18 +9,11 @@ import operaciones.CrearPeticiones;
 
 public class Sala {
 	
-	
 	static int tamañoMes =	CargarConfiguracion.getMes().length(false);
 	String nombreSala;
-	
-	public String getNombreSala() {
-		return nombreSala;
-	}
-
-
-
 	DisponibilidadDiaria[] disponibilidades; 
 	boolean incidencia =false;
+
 	
 	
 public Sala(String nombreSala) {		
@@ -29,12 +22,17 @@ public Sala(String nombreSala) {
 		setDispo();
 	}
 
+
 public void setDispo(){ 
 for(int i=0;i<tamañoMes;i++){	
 	disponibilidades[i] = new DisponibilidadDiaria(
 	LocalDate.of(CargarConfiguracion.getAño(), CargarConfiguracion.getMes(), i+1));	
 	}
 }	
+
+public String getNombreSala() {
+	return nombreSala;
+}
 
 public void imprimirDisp(){
 	for(int i=0;i<disponibilidades.length;i++){
@@ -45,8 +43,6 @@ public void imprimirDisp(){
 public DisponibilidadDiaria[] getDisponibilidades() {
 	return disponibilidades;
 	}
-
-
 
 
 //********************
@@ -72,23 +68,22 @@ public void ocuparHorarios(){
 	//filtras peticiones por mes. solo se procesaran las peticiones del mes a procesar
 	//solo se procesaran las peticiones que indiquen la sal igual a la de la instancia	
 		if(CrearPeticiones.getListaPeticiones().get(i).fechaInicio.getMonth()==
-				CargarConfiguracion.getMes()
-				&&
+			CargarConfiguracion.getMes()&&
 				CrearPeticiones.getListaPeticiones().get(i).sala.equals(this.nombreSala)
-
-						){
+			){
 	
 		
-		for(int q=0; q<this.disponibilidades.length;q++)
-		{
+		for(int q=0; q<this.disponibilidades.length;q++){
+		
 			
-			if(
-				CrearPeticiones.getListaPeticiones().get(i).fechaInicio.equals(this.disponibilidades[q].fecha)||
-				((disponibilidades[q].fecha.isAfter(CrearPeticiones.getListaPeticiones().get(i).fechaInicio)&&
-				(disponibilidades[q].fecha.isBefore(CrearPeticiones.getListaPeticiones().get(i).fechaFin)||
-				disponibilidades[q].fecha.isEqual(CrearPeticiones.getListaPeticiones().get(i).fechaFin)))))
+//fecha incicio fecha fin y periodo entre fechas			
+	if(CrearPeticiones.getListaPeticiones().get(i).fechaInicio.equals(this.disponibilidades[q].fecha)||
+	((disponibilidades[q].fecha.isAfter(CrearPeticiones.getListaPeticiones().get(i).fechaInicio)&&
+	(disponibilidades[q].fecha.isBefore(CrearPeticiones.getListaPeticiones().get(i).fechaFin)||
+	disponibilidades[q].fecha.isEqual(CrearPeticiones.getListaPeticiones().get(i).fechaFin)))))
 				{
 //*********************** filtro dias de la semana ***************			
+		
 		
 	for(int h=0; h<disponibilidades.length;h++){
 		for (int z=0; z<CrearPeticiones.getListaPeticiones().get(i).getDiasSemana().size();z++)
@@ -110,12 +105,13 @@ public void ocuparHorarios(){
 			
 			if(disponibilidades[q].slotsHorasActividad[hIn]==null){
 							
-				//este for repite el proceso de guardar el nombre de la actividad 
-				//en los slot siguientes tantas veces cuantas son las horas de duracion de la actividad
-						
-			for(int k=0;k<duracion;k++ ){
+
 				
-								
+	//este for repite el proceso de guardar el nombre de la actividad 
+	//en los slot siguientes tantas veces cuantas son las horas de duracion de la actividad
+									
+			for(int k=0;k<duracion;k++ ){
+										
 				disponibilidades[q].slotsHorasActividad[hIn] = act;
 				
 //				if(disponibilidades[q].slotsHorasActividad[hIn]!=null)	
@@ -124,21 +120,8 @@ public void ocuparHorarios(){
 				CrearPeticiones.getListaPeticiones().get(i).incident=true;
 	
 				hIn++;
-	
-				
-				
-				
-				}
-				
-				
-			
-				
-				
-				
-				
 					
-			
-				
+				}				
 
 			if(CrearPeticiones.listaPeticiones.get(i).horaInicioS2!=0){			
 				for(int m=0;m<duracion2;m++ ){			
@@ -149,16 +132,9 @@ public void ocuparHorarios(){
 			}						
 		}
 	}	
-	}
-	}	
-	}
+}
+}	
 }
 }
-
-
-
-
-
-
-
+}
 }
