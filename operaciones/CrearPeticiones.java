@@ -13,18 +13,18 @@ public class CrearPeticiones {
  //ej. peticion: ReunionJava Sala1 01/01/2008 31/12/2008 LMCJVSG 00-07_21-24
 	
 	
-	boolean incident;
+	
 	
 	
 	public static ArrayList<Peticion> listaPeticiones = new ArrayList<>();
-	
 	
 	public static ArrayList<Peticion> getListaPeticiones() {
 		return listaPeticiones;
 	}
 
 	
-	public void crearPeticion() {	
+	
+	public static void crearPeticion() {	
 		try(BufferedReader br = 
 				new BufferedReader(new FileReader("src/peticiones.txt"))) 
 		{
@@ -80,11 +80,7 @@ public class CrearPeticiones {
 //				comienzoSession2 = Integer.parseInt(session2[0]);
 //				finSession2 = Integer.parseInt(session2[1]);
 				
-				
-				
-
-
-				
+		
 				}
 				
 				
@@ -94,7 +90,7 @@ public class CrearPeticiones {
 				int[] horarios ={comienzoSession1,comienzoSession2,finSession1,finSession2};
 				
 				
-				
+				boolean incident = false;
 				Peticion peticion = 
 						new Peticion(
 						array[0], array[1], 
@@ -107,22 +103,11 @@ public class CrearPeticiones {
 						incident
 								);
 						
-						
-
-				
-				
 				listaPeticiones.add(peticion);
 				
 			}			
 				
-			
-			
-			
-			
-			//System.out.println(br.readLine());
-			
-			
-	
+			//System.out.println(br.readLine());	
 		} catch(IOException e) {
 			e.printStackTrace();
 		}

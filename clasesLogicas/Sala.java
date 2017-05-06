@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 import operaciones.CargarConfiguracion;
 import operaciones.CrearPeticiones;
+import operaciones.EscribirTablaHTML;
 
 
 public class Sala {
@@ -19,6 +20,8 @@ public Sala(String nombreSala) {
 		this.nombreSala = nombreSala;
 		this.disponibilidades =  new DisponibilidadDiaria[tamañoMes];		
 		setDispo();
+		ocuparHorarios();
+		EscribirTablaHTML.escribirTablasHTML(this);
 	}
 
 
