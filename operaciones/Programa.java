@@ -47,7 +47,11 @@ public class Programa {
 
 
 			Sala s1 = new Sala("Sala1");
-		
+
+			
+			
+			
+			
 			//imprimir en consola tablas s1
 			//System.out.println(VistaTablas.buildTablasHTML(s1).toString());
 			

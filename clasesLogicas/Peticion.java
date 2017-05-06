@@ -10,13 +10,13 @@ import operaciones.CargarConfiguracion;
 
 public class Peticion {
 	
-	public String actividad;
-	public String sala;
-	public LocalDate fechaInicio;
-	public LocalDate fechaFin;	
-	public String diasSemana;
-	public int horaInicioS1;
-	public int horaFinS1;
+	private String actividad;
+	private String sala;
+	private LocalDate fechaInicio;
+	private LocalDate fechaFin;	
+	private String diasSemana;
+	private int horaInicioS1;
+	private int horaFinS1;
 	public int horaInicioS2;
 	public int horaFinS2;
 	public int[] horarios;
@@ -33,8 +33,8 @@ public class Peticion {
 		this.fechaInicio = fechaInicio;
 		this.fechaFin = fechaFin;
 		this.diasSemana = diasSemana;
-		this.horaInicioS1 = horaInicioS1;
-		this.horaFinS1 = horaFinS1;
+		this.setHoraInicioS1(horaInicioS1);
+		this.setHoraFinS1(horaFinS1);
 		this.horaInicioS2 = horaInicioS2;
 		this.horaFinS2 = horaFinS2;
 		this.horarios= horarios;
@@ -56,12 +56,25 @@ public class Peticion {
 	}
 
 
+	
+
+	public LocalDate getFechaInicio() {
+		return fechaInicio;
+	}
+
+	public LocalDate getFechaFin() {
+		return fechaFin;
+	}
+
+	public String getSala() {
+		return sala;
+	}
 
 	@Override
 	public String toString() {
 		return "Peticion [actividad=" + actividad + ", sala=" + sala + ", fechaInicio=" + fechaInicio + ", fechaFin="
-				+ fechaFin + ", diasSemana=" + diasSemana + ", horaInicioS1=" + horaInicioS1 + ", horaFinS1="
-				+ horaFinS1 + ", horaInicioS2=" + horaInicioS2 + ", horaFinS2=" + horaFinS2+ "Incident: " + incident +"]\n";
+				+ fechaFin + ", diasSemana=" + diasSemana + ", horaInicioS1=" + getHoraInicioS1() + ", horaFinS1="
+				+ getHoraFinS1() + ", horaInicioS2=" + horaInicioS2 + ", horaFinS2=" + horaFinS2+ "Incident: " + incident +"]\n";
 	}
 
 
@@ -89,9 +102,6 @@ public class Peticion {
 		case "S": dia = DayOfWeek.SATURDAY;break;
 		case "N": dia = DayOfWeek.SUNDAY;break;
 		
-	 
-		
-		
 		}
 	}
 		return dia;
@@ -106,6 +116,22 @@ public class Peticion {
 			diasArrayList.add(convertDay(String.valueOf(diasSemana.charAt(i))));
 		}
 		return diasArrayList;
+	}
+
+	public int getHoraInicioS1() {
+		return horaInicioS1;
+	}
+
+	public void setHoraInicioS1(int horaInicioS1) {
+		this.horaInicioS1 = horaInicioS1;
+	}
+
+	public int getHoraFinS1() {
+		return horaFinS1;
+	}
+
+	public void setHoraFinS1(int horaFinS1) {
+		this.horaFinS1 = horaFinS1;
 	}
 	
 }

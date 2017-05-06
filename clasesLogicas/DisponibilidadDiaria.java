@@ -6,9 +6,8 @@ import java.util.Arrays;
 
 public class DisponibilidadDiaria {
 
-	LocalDate fecha;
-	String[] slotsHorasActividad;
-
+	private LocalDate fecha;
+	private String[] slotsHorasActividad;
 	public DisponibilidadDiaria(LocalDate fecha) {
 	
 		this.fecha = fecha;
@@ -18,6 +17,7 @@ public class DisponibilidadDiaria {
 		//cada slot es un intevalo 0-1, 0-2 etc....
 		
 		
+	
 
 	@Override
 	public String toString() {
