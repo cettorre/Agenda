@@ -90,7 +90,7 @@ public class Programa {
 			
 
 			
-			System.out.println(vistaTablas.buildTablasHTML(s1).toString());
+			System.out.println(VistaTablas.buildTablasHTML(s1).toString());
 		
 			System.out.println(CrearPeticiones.getListaPeticiones());
 

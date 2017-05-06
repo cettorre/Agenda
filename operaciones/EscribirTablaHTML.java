@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import clasesLogicas.Sala;
-import vistaHtml_pack.vistaTablas;
+import vistaHtml_pack.VistaTablas;
 
 
 public class EscribirTablaHTML {
@@ -13,7 +13,7 @@ public class EscribirTablaHTML {
 		public static void escribirTablasHTML(Sala sala){
 			
 			
-			String tablasHtml = vistaTablas.buildTablasHTML(sala).toString();
+			String tablasHtml = VistaTablas.buildTablasHTML(sala).toString();
 			
 			try {
 				FileWriter html 

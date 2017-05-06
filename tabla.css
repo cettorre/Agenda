@@ -1,0 +1,24 @@
+<style>
+        table{
+            border: 1px solid #bbb;
+            width: 100%; 
+            border-collapse: collapse; 
+            }
+        
+        /*th{border: 1px solid;
+            line-height: 1.7em;
+                               
+        }
+*/        
+        td{border: 1px solid;}
+        
+        tr:nth-child(odd){background: lightblue}
+        tr:nth-child(even){background: lightgreen}
+        th{background: lightblue}
+        tr:hover{
+            background-color: lightblue;  
+            cursor: pointer;
+        }
+        
+    </style>
+    
