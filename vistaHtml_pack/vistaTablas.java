@@ -78,21 +78,21 @@ public static StringBuilder buildTablasHTML(Sala sala){
 	for (int i = 0; i < 23; i++) {
 	    tablaHorariosSemanales.append("<tr><td>")
 	    .append(horariosHtml[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[7].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[8].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[9].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[10].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[11].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[12].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[13].getSlotsHorasActividad()[i])
-	       .append("</td></tr>");
+	    .append("</td><td>");
+	    if(sala.getDisponibilidades()[7].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[7].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[8].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[8].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[9].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[9].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[10].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[10].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[11].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[11].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[12].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[12].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[13].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[13].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td></tr>");
 	}
 	tablaHorariosSemanales.append("</table>" +
 	           "</body>" +
@@ -119,21 +119,21 @@ public static StringBuilder buildTablasHTML(Sala sala){
 	for (int i = 0; i < 23; i++) {
 	    tablaHorariosSemanales.append("<tr><td>")
 	    .append(horariosHtml[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[14].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[15].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[16].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[17].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[18].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[19].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[20].getSlotsHorasActividad()[i])
-	       .append("</td></tr>");
+	    .append("</td><td>");
+	    if(sala.getDisponibilidades()[14].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[14].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[15].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[15].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[16].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[16].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[17].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[17].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[18].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[18].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[19].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[19].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[20].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[20].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td></tr>");
 	}
 	tablaHorariosSemanales.append("</table>" +
 	           "</body>" +
@@ -159,21 +159,21 @@ public static StringBuilder buildTablasHTML(Sala sala){
 	for (int i = 0; i < 23; i++) {
 	    tablaHorariosSemanales.append("<tr><td>")
 	    .append(horariosHtml[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[21].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[22].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[23].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[24].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[24].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[26].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[27].getSlotsHorasActividad()[i])
-	       .append("</td></tr>");
+	    .append("</td><td>");
+	    if(sala.getDisponibilidades()[21].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[21].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[22].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[22].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[23].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[23].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[24].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[24].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[25].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[25].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[26].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[26].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[27].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[27].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td></tr>");
 	}
 	tablaHorariosSemanales.append("</table>" +
 	           "</body>" +
@@ -201,21 +201,21 @@ public static StringBuilder buildTablasHTML(Sala sala){
 	for (int i = 0; i < 23; i++) {
 	    tablaHorariosSemanales.append("<tr><td>")
 	    .append(horariosHtml[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[28].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[29].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[0].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[1].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[2].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[3].getSlotsHorasActividad()[i])
-	       .append("</td><td>")
-	       .append(sala.getDisponibilidades()[4].getSlotsHorasActividad()[i])
-	       .append("</td></tr>");
+	    .append("</td><td>");
+	    if(sala.getDisponibilidades()[28].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[28].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[29].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[29].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[0].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[0].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[1].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[1].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[2].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[2].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[3].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[3].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td><td>");
+	       if(sala.getDisponibilidades()[4].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[4].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
+	       tablaHorariosSemanales.append("</td></tr>");
 	}
 	tablaHorariosSemanales.append("</table>" +
 	           "</body>" +
