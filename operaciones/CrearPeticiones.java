@@ -24,7 +24,7 @@ public class CrearPeticiones {
 
 	
 	
-	public static void crearPeticion() {	
+	public static void crearPeticiones() {	
 		try(BufferedReader br = 
 				new BufferedReader(new FileReader("src/peticiones.txt"))) 
 		{

@@ -19,14 +19,20 @@ public class CargarConfiguracion {
 	static String[] array;
 	static ArrayList<String> configuracion = new ArrayList<>();
 	
+	
+	
+	
+	
+	
 	public static void leerConfig() {
 		
 		try(BufferedReader br = new BufferedReader(new FileReader("src/config.txt"))) 
 		{
-			while ( (linea = br.readLine()) != null ) {
+			while ((linea = br.readLine()) != null ) {
 				array = linea.split(" ");
 				configuracion.add(array[0]);								
-				configuracion.add(array[1]);				
+				configuracion.add(array[1]);
+
 			}
 		} catch(IOException e) {
 			e.printStackTrace();
@@ -34,6 +40,13 @@ public class CargarConfiguracion {
 	}
 	
 	
+	public static void inicializeConfig(){
+	
+		año=configuracion.get(0);
+		mes=configuracion.get(1);
+		idiomaEntrada=configuracion.get(2);
+		idiomaSalida=configuracion.get(3);
+	}
 	
 	
 	
