@@ -16,7 +16,8 @@ public static StringBuilder buildTablasHTML(Sala sala){
 	String[] horariosHtml ={"0-1","1-2","2-3","3-4","4-5","5-6","6-7","7-8","8-9","9-10","10-11","11-12","12-13","13-14","14-15","15-16","16-17","17-18","18-19","19-20","20-21","21-22","22-23"};	
 		
 	// <link rel="stylesheet" href="tabla.css">
-	tablaHorariosSemanales.append("<html>" +
+	tablaHorariosSemanales.append("<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><title>Document</title></head>"+
+			
 	           "<body>" +
 	           "<link rel=\"stylesheet\" href=\"tabla.css\">" +
 	           "<table>" +
@@ -53,14 +54,9 @@ public static StringBuilder buildTablasHTML(Sala sala){
 	       tablaHorariosSemanales.append("</td></tr>");
 	    
 	}
-	tablaHorariosSemanales.append("</table>" +
-	           "</body>" +
-	           "</html>");
-
+	tablaHorariosSemanales.append("</table>"); 	
 	
-	
-	tablaHorariosSemanales.append("<html>" +
-	           "<body>" +
+	tablaHorariosSemanales.append(
 	           "<table>" +
 	           "<tr>" +
 	           "<th>HORA</th>" +
@@ -94,14 +90,11 @@ public static StringBuilder buildTablasHTML(Sala sala){
 	       if(sala.getDisponibilidades()[13].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[13].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
 	       tablaHorariosSemanales.append("</td></tr>");
 	}
-	tablaHorariosSemanales.append("</table>" +
-	           "</body>" +
-	           "</html>");
+	tablaHorariosSemanales.append("</table>" );
 
 	
 	
-	tablaHorariosSemanales.append("<html>" +
-	           "<body>" +
+	tablaHorariosSemanales.append(
 	           "<table>" +
 	           "<tr>" +
 	           "<th>HORA</th>" +
@@ -135,13 +128,10 @@ public static StringBuilder buildTablasHTML(Sala sala){
 	       if(sala.getDisponibilidades()[20].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[20].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
 	       tablaHorariosSemanales.append("</td></tr>");
 	}
-	tablaHorariosSemanales.append("</table>" +
-	           "</body>" +
-	           "</html>");
+	tablaHorariosSemanales.append("</table>" );
 	
 	
-	tablaHorariosSemanales.append("<html>" +
-	           "<body>" +
+	tablaHorariosSemanales.append(
 	           "<table>" +
 	           "<tr>" +
 	           "<th>HORA</th>" +
@@ -175,15 +165,12 @@ public static StringBuilder buildTablasHTML(Sala sala){
 	       if(sala.getDisponibilidades()[27].getSlotsHorasActividad()[i]!=null){tablaHorariosSemanales.append(sala.getDisponibilidades()[27].getSlotsHorasActividad()[i]);}else{tablaHorariosSemanales.append("");};
 	       tablaHorariosSemanales.append("</td></tr>");
 	}
-	tablaHorariosSemanales.append("</table>" +
-	           "</body>" +
-	           "</html>");
+	tablaHorariosSemanales.append("</table>" );
 	
 	
 	
 	
-	tablaHorariosSemanales.append("<html>" +
-	           "<body>" +
+	tablaHorariosSemanales.append(
 	           "<table>" +
 	           "<tr>" +
 	           "<th>HORA</th>" +
