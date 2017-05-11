@@ -1,3 +1,11 @@
+IMPORTANT: This is a learning project. The aim of this project was practicing with different types of Streams
+in order to get confident with reading and writing on files using the classes provided by the java.io* package.
+Due to this restriction this project adopt solutions that are not recommended. Anyway I had a lot of fun
+adapting the logic of the program to the requirements of the project statement. Ciro
+
+
+
+
 # Agenda
 reservar horarios, streams serializacion
 
