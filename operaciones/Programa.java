@@ -11,7 +11,10 @@ public class Programa {
 		CrearPeticiones.crearPeticiones();
 
 			Sala s1 = new Sala("Sala1");
-				
+			Sala s2 = new Sala("Sala2");
+			Sala s3 = new Sala("Sala3");
+			Sala s4 = new Sala("Sala4");
+			Sala s5 = new Sala("Sala5");
 		EscibirIncidencias.escribeIncidencias();
 	
 		

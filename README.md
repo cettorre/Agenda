@@ -1,7 +1,6 @@
-IMPORTANT: This is a learning project. The aim of this project was practicing with different types of Streams
-in order to get confident with reading and writing on files using the classes provided by the java.io* package.
-Due to this restriction this project adopt solutions that are not recommended. Anyway I had a lot of fun
-adapting the logic of the program to the requirements of the project statement. Ciro
+IMPORTANT: This is a learning project. As you will see in the commits section on github the code has been constantly 
+updated during the development. The aim of this project was practicing with different types of Streams. 
+The program has been adapted to the requirements of the following statement.
 
 
 
