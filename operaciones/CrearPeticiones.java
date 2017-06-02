@@ -12,10 +12,6 @@ import clasesLogicas.Peticion;
 public class CrearPeticiones {
  //ej. peticion: ReunionJava Sala1 01/01/2008 31/12/2008 LMCJVSG 00-07_21-24
 	
-	
-	
-	
-	
 	public static ArrayList<Peticion> listaPeticiones = new ArrayList<>();
 	
 	public static ArrayList<Peticion> getListaPeticiones() {

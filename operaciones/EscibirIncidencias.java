@@ -7,8 +7,7 @@ import java.io.IOException;
 public class EscibirIncidencias {
 
 	
-	
-	
+		
 	public static void escribeIncidencias() throws IOException{
 		
 		BufferedWriter fWincidencias = new BufferedWriter(new FileWriter("src/incidencias.txt"));
@@ -28,9 +27,7 @@ public class EscibirIncidencias {
 		}
 		fWincidencias.close();
 		
-		
-
-		
+			
 		
 	}
 	

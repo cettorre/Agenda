@@ -4,12 +4,9 @@ import clasesLogicas.Sala;
 
 public class VistaTablas {
 
-
-	
 	
 public static StringBuilder buildTablasHTML(Sala sala){
 
-	
 	
 	StringBuilder tablaHorariosSemanales = new StringBuilder();
 	

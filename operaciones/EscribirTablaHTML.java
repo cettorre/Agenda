@@ -26,10 +26,6 @@ public class EscribirTablaHTML {
 					} catch (IOException e) {
 						
 						e.printStackTrace();
-					}
-			
-			
-		}
-	
-	
+					}	
+		}	
 }
